@@ -1,0 +1,26 @@
+{% load staticfiles %}
+        <html>
+        <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <meta charset="utf-8" />
+        <title>login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{% static 'assets/css/fonts.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/default.css' %}">
+        </head>
+    <body>
+    <form action="." method="POST" name="from1">
+        {% csrf_token %}
+        <div id="page" class="container">
+ 
+               <div>account:<input type="text" name="username" id="username"/></div>
+               <div>password:<input type="password" name="password" id="password"/></div>
+               <div><input type="submit" name="button" id="button" value="login"/> </div>
+               <span style="color:black">{{message}}</span>
+    </form>
+            <a href="/closerice/register/">register</a>
+
+        </div>
+</body>
+</html>

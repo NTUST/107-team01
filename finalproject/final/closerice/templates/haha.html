@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+{% if request.user.is_authenticated %}
+<head>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<meta charset="utf-8" />
+<title>公館 GongGuan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="{% static 'assets/css/fonts.css' %}" />
+<link rel="stylesheet" href="{% static 'assets/css/default.css' %}" />
+</head>
+	
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a name='top'>公館 GongGuan</a></h1>
+			<h  color="blue"><a href="/closerice/index/"><u>回目錄</u></a></h>
+			<h  color="blue"><a href="/closerice/taipei_1/"><u>回台北目錄</u></a></h>
+			<a href="/closerice/hahaeditpage/"><u>新增我最愛的餐廳</u></a>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="/closerice/logout/">登出</a>
+					<h>用戶名稱:{{user.username}}</h>
+					</li>
+			</ul>
+		</div>
+		
+		</div>
+		<img src="/static/images/GongGuan.jpg" width="1000" height="500" alt="" style="display:block; margin:auto;"/>
+		</div>
+	</div>
+	<div id="page" class="container">
+			{% for list in rest %}
+			<div class="title">
+				<h2>{{list.name}}</h2>
+			</div>
+		<div id="haha">
+			<tr>
+				<td><img src="{{list.image.url}}"></td>
+				<td><h3>簡介:</h3><p>{{list.content}}</p></td>
+				<td><h3>地點:</h3><p>{{list.address}}</p></td>
+				<td><h3>大約價格:</h3><p>{{list.price}}</p></td>
+				<td><h3>營業時間:</h3><p>{{list.worktime}}</p></td>
+			</tr>
+			<br><br>
+			{% endfor %}
+
+</body>
+{% else %}
+<p>未登入</p>
+<a href="/closerice/login/">登入</a>
+{% endif %}
+</html>

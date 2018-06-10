@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		{% load staticfiles %}
+		{% if request.user.is_authenticated %}
+		<title>首頁</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	</head>
+	<body>
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<div class="content">
+						<h1>歡迎</h1>
+						<h2>{{user.username}}</h2>
+						<a href="#" class="button big alt"><span>點撃進入</span></a>
+					</div>
+					<a href="#" class="button hidden"><span>Let's go</span></a>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+				<div class="inner">
+					<div class="columns">
+
+						<!-- Column 1 (horizontal, vertical, horizontal, vertical) -->
+							<div class="image fit">
+								<a href="/closerice/taipei_1/"><img src='/static/images/pic01.jpg' onmouseover="this.src='/static/images/pic01_.jpg';" onmouseout="this.src='/static/images/pic01.jpg';"   title="TaiPei"/></a>
+							</div>
+							<div class="image fit">
+								<img src="/static/images/pic02.jpg" onmouseover="this.src='/static/images/pic02_.jpg';" onmouseout="this.src='/static/images/pic02.jpg';"  title="Coming Soon"/>
+							</div>
+							<div class="image fit">
+								<img src='/static/images/pic03.jpg' onmouseover="this.src='/static/images/pic03_.jpg';" onmouseout="this.src='/static/images/pic03.jpg';"  title="Coming Soon" />
+							</div>
+							<div class="image fit">
+								<img src='/static/images/pic04.jpg' onmouseover="this.src='/static/images/pic04_.jpg';" onmouseout="this.src='/static/images/pic04.jpg';"  title="Coming Soon" />
+							</div>
+
+						<!-- Column 2 (vertical, horizontal, vertical, horizontal) -->
+							<div class="image fit">
+								<img src='/static/images/pic05.jpg' onmouseover="this.src='/static/images/pic05_.jpg';" onmouseout="this.src='/static/images/pic05.jpg';"  title="Coming Soon" />
+							</div>
+							<div class="image fit">
+								<img src='/static/images/pic06.jpg' onmouseover="this.src='/static/images/pic06_.jpg';" onmouseout="this.src='/static/images/pic06.jpg';"  title="Coming Soon" />
+							</div>
+							<div class="image fit">
+								<img src='/static/images/pic07.jpg' onmouseover="this.src='/static/images/pic07_.jpg';" onmouseout="this.src='/static/images/pic07.jpg';"  title="Coming Soon" />
+							</div>
+							<div class="image fit">
+								<img src='/static/images/pic08.jpg' onmouseover="this.src='/static/images/pic08_.jpg';" onmouseout="this.src='/static/images/pic08.jpg';"  title="Coming Soon" />
+							</div>
+
+						<!-- Column 3 (horizontal, vertical, horizontal, vertical) -->
+							<div class="image fit">
+								<img src='/static/images/pic09.jpg' onmouseover="this.src='/static/images/pic09_.jpg';" onmouseout="this.src='/static/images/pic09.jpg';"  title="Coming Soon" />
+							</div>
+							<div class="image fit">
+								<img src='/static/images/pic10.jpg' onmouseover="this.src='/static/images/pic10_.jpg';" onmouseout="this.src='/static/images/pic10.jpg';"  title="Coming Soon" />
+							</div>
+							<div class="image fit">
+								<img src='/static/images/pic11.jpg' onmouseover="this.src='/static/images/pic11_.jpg';" onmouseout="this.src='/static/images/pic11.jpg';"  title="Coming Soon" />
+							</div>
+							<div class="image fit">
+								<img src='/static/images/pic12.jpg' onmouseover="this.src='/static/images/pic12_.jpg';" onmouseout="this.src='/static/images/pic12.jpg';"  title="Coming Soon" />
+							</div>
+
+						<!-- Column 4 (vertical, horizontal, vertical, horizontal) -->
+							<div class="image fit">
+								<img src='/static/images/pic13.png' onmouseover="this.src='/static/images/pic13_.png';" onmouseout="this.src='/static/images/pic13.png';"  title="Coming Soon" />
+							</div>
+							<div class="image fit">
+								<img src='/static/images/pic14.jpg' onmouseover="this.src='/static/images/pic14_.jpg';" onmouseout="this.src='/static/images/pic14.jpg';"  title="Coming Soon" />
+							</div>
+						     <div class="image fit">
+								<img src='/static/images/pic15.jpg' onmouseover="this.src='/static/images/pic15_.jpg';" onmouseout="this.src='/static/images/pic15.jpg';"  title="Coming Soon" />
+							</div>
+					</div>
+				</div>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<a href="#" class="info fa fa-info-circle"><span>About</span></a>
+				<div class="inner">
+					<div class="content">
+						<h3>謝謝你的瀏覽</h3>
+						<p>喜歡適度的孤單，心靈上最釋放的一刻，總捨不得跟別人共享，事實上也很難分享這絕對個人的珍寶，甚至荷西自願留在家裡看電視，我的心裡都暗藏了幾分喜悅。清風明月都該應是一個人的事情，倒是吃飯，是人多些比較有味道。
+      </p><p align="right">—— 三毛 《黃昏的故事》</p>
+					</div>
+					<div class="copyright">
+						<h3>Follow We</h3>
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+			<p><a href ="/closerice/logout/">logout</a></p>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+			{% else %}
+			<p>未登入</p>
+            <a href ="/closerice/login/">login</a>
+			<a href ="/closerice/register/">register</a>
+			{% endif %}
+	</body>
+</html>
